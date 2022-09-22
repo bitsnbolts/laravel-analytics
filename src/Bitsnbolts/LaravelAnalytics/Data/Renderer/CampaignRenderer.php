@@ -1,8 +1,8 @@
 <?php
 
-namespace Ipunkt\LaravelAnalytics\Data\Renderer;
+namespace Bitsnbolts\LaravelAnalytics\Data\Renderer;
 
-use Ipunkt\LaravelAnalytics\Data\Campaign;
+use Bitsnbolts\LaravelAnalytics\Data\Campaign;
 
 class CampaignRenderer implements Renderer
 {

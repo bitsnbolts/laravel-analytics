@@ -1,14 +1,14 @@
 <?php
 
-namespace Ipunkt\LaravelAnalytics\Contracts;
+namespace Bitsnbolts\LaravelAnalytics\Contracts;
 
-use Ipunkt\LaravelAnalytics\Data\Campaign;
-use Ipunkt\LaravelAnalytics\Data\Event;
+use Bitsnbolts\LaravelAnalytics\Data\Campaign;
+use Bitsnbolts\LaravelAnalytics\Data\Event;
 
 /**
  * Interface AnalyticsProviderInterface
  *
- * @package Ipunkt\LaravelAnalytics\Contracts
+ * @package Bitsnbolts\LaravelAnalytics\Contracts
  */
 interface AnalyticsProviderInterface
 {
@@ -100,8 +100,8 @@ interface AnalyticsProviderInterface
      *
      * @param string $metricName
      * @param mixed $metricValue
-     * @param \Ipunkt\LaravelAnalytics\Data\Event $event
-     * @param \Ipunkt\LaravelAnalytics\Data\Campaign $campaign
+     * @param \Bitsnbolts\LaravelAnalytics\Data\Event $event
+     * @param \Bitsnbolts\LaravelAnalytics\Data\Campaign $campaign
      * @param string|null $clientId
      * @param array $params
      *

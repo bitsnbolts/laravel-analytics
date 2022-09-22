@@ -1,10 +1,10 @@
 <?php
 
-namespace Ipunkt\LaravelAnalytics\Data\Renderer;
+namespace Bitsnbolts\LaravelAnalytics\Data\Renderer;
 
 /**
  * Interface Renderer
- * @package Ipunkt\LaravelAnalytics\Data\Renderer
+ * @package Bitsnbolts\LaravelAnalytics\Data\Renderer
  */
 interface Renderer
 {

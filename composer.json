@@ -21,7 +21,7 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"Ipunkt\\LaravelAnalytics\\": "src/"
+			"Bitsnbolts\\LaravelAnalytics\\": "src/"
 		}
 	},
 	"minimum-stability": "stable",
@@ -35,10 +35,10 @@
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Ipunkt\\LaravelAnalytics\\AnalyticsServiceProvider"
+				"Bitsnbolts\\LaravelAnalytics\\AnalyticsServiceProvider"
 			],
 			"aliases": {
-				"Analytics": "Ipunkt\\LaravelAnalytics\\AnalyticsFacade"
+				"Analytics": "Bitsnbolts\\LaravelAnalytics\\AnalyticsFacade"
 			}
 		}
 	}

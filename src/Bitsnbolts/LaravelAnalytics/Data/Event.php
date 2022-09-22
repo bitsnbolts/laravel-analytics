@@ -1,11 +1,11 @@
 <?php
 
-namespace Ipunkt\LaravelAnalytics\Data;
+namespace Bitsnbolts\LaravelAnalytics\Data;
 
 /**
  * Class Event
  *
- * @package Ipunkt\LaravelAnalytics\Data
+ * @package Bitsnbolts\LaravelAnalytics\Data
  */
 class Event
 {

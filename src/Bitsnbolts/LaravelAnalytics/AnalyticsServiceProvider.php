@@ -1,6 +1,6 @@
 <?php
 
-namespace Ipunkt\LaravelAnalytics;
+namespace Bitsnbolts\LaravelAnalytics;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
@@ -37,13 +37,13 @@ class AnalyticsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('Ipunkt\LaravelAnalytics\Contracts\AnalyticsProviderInterface',
+        $this->app->singleton('Bitsnbolts\LaravelAnalytics\Contracts\AnalyticsProviderInterface',
             function () {
                 // get analytics provider name
                 $provider = Config::get('analytics.provider');
 
                 // make it a class
-                $providerClass = 'Ipunkt\LaravelAnalytics\Providers\\' . $provider;
+                $providerClass = 'Bitsnbolts\LaravelAnalytics\Providers\\' . $provider;
 
                 // getting the config
                 $providerConfig = [];

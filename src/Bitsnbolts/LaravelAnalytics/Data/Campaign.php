@@ -1,11 +1,11 @@
 <?php
 
-namespace Ipunkt\LaravelAnalytics\Data;
+namespace Bitsnbolts\LaravelAnalytics\Data;
 
 /**
  * Class Campaign
  *
- * @package Ipunkt\LaravelAnalytics\Data
+ * @package Bitsnbolts\LaravelAnalytics\Data
  */
 class Campaign
 {
@@ -140,7 +140,7 @@ class Campaign
      *
      * @param string $keyword
      *
-     * @return \Ipunkt\LaravelAnalytics\Data\Campaign
+     * @return \Bitsnbolts\LaravelAnalytics\Data\Campaign
      */
     public function setKeyword($keyword)
     {
@@ -163,7 +163,7 @@ class Campaign
      *
      * @param string $content
      *
-     * @return \Ipunkt\LaravelAnalytics\Data\Campaign
+     * @return \Bitsnbolts\LaravelAnalytics\Data\Campaign
      */
     public function setContent($content)
     {
@@ -186,7 +186,7 @@ class Campaign
      *
      * @param string $id
      *
-     * @return \Ipunkt\LaravelAnalytics\Data\Campaign
+     * @return \Bitsnbolts\LaravelAnalytics\Data\Campaign
      */
     public function setId($id)
     {

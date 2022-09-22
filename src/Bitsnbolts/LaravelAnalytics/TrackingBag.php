@@ -1,14 +1,14 @@
 <?php
 
-namespace Ipunkt\LaravelAnalytics;
+namespace Bitsnbolts\LaravelAnalytics;
 
 use Illuminate\Support\Facades\Session;
-use Ipunkt\LaravelAnalytics\Contracts\TrackingBagInterface;
+use Bitsnbolts\LaravelAnalytics\Contracts\TrackingBagInterface;
 
 /**
  * Class TrackingBag
  *
- * @package Ipunkt\LaravelAnalytics
+ * @package Bitsnbolts\LaravelAnalytics
  */
 class TrackingBag implements TrackingBagInterface
 {

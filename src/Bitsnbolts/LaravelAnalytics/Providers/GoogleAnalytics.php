@@ -1,19 +1,19 @@
 <?php
 
-namespace Ipunkt\LaravelAnalytics\Providers;
+namespace Bitsnbolts\LaravelAnalytics\Providers;
 
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
-use Ipunkt\LaravelAnalytics\Contracts\AnalyticsProviderInterface;
-use Ipunkt\LaravelAnalytics\Data\Campaign;
-use Ipunkt\LaravelAnalytics\Data\Event;
-use Ipunkt\LaravelAnalytics\Data\Renderer\CampaignRenderer;
-use Ipunkt\LaravelAnalytics\TrackingBag;
+use Bitsnbolts\LaravelAnalytics\Contracts\AnalyticsProviderInterface;
+use Bitsnbolts\LaravelAnalytics\Data\Campaign;
+use Bitsnbolts\LaravelAnalytics\Data\Event;
+use Bitsnbolts\LaravelAnalytics\Data\Renderer\CampaignRenderer;
+use Bitsnbolts\LaravelAnalytics\TrackingBag;
 
 /**
  * Class GoogleAnalytics
  *
- * @package Ipunkt\LaravelAnalytics\Providers
+ * @package Bitsnbolts\LaravelAnalytics\Providers
  */
 class GoogleAnalytics implements AnalyticsProviderInterface
 {
@@ -407,7 +407,7 @@ class GoogleAnalytics implements AnalyticsProviderInterface
     /**
      * render script block
      *
-     * @return \Ipunkt\LaravelAnalytics\Providers\GoogleAnalytics
+     * @return \Bitsnbolts\LaravelAnalytics\Providers\GoogleAnalytics
      */
     public function enableScriptBlock()
     {
@@ -419,7 +419,7 @@ class GoogleAnalytics implements AnalyticsProviderInterface
     /**
      * do not render script block
      *
-     * @return \Ipunkt\LaravelAnalytics\Providers\GoogleAnalytics
+     * @return \Bitsnbolts\LaravelAnalytics\Providers\GoogleAnalytics
      */
     public function disableScriptBlock()
     {
@@ -513,7 +513,7 @@ class GoogleAnalytics implements AnalyticsProviderInterface
     /**
      * make the tracking measurement url insecure
      *
-     * @return \Ipunkt\LaravelAnalytics\Providers\GoogleAnalytics
+     * @return \Bitsnbolts\LaravelAnalytics\Providers\GoogleAnalytics
      */
     public function unsecureMeasurementUrl()
     {
@@ -525,7 +525,7 @@ class GoogleAnalytics implements AnalyticsProviderInterface
     /**
      * use the secured version of the tracking measurement url
      *
-     * @return \Ipunkt\LaravelAnalytics\Providers\GoogleAnalytics
+     * @return \Bitsnbolts\LaravelAnalytics\Providers\GoogleAnalytics
      */
     public function secureMeasurementUrl()
     {
@@ -541,8 +541,8 @@ class GoogleAnalytics implements AnalyticsProviderInterface
      *
      * @param string $metricName
      * @param mixed $metricValue
-     * @param \Ipunkt\LaravelAnalytics\Data\Event $event
-     * @param \Ipunkt\LaravelAnalytics\Data\Campaign $campaign
+     * @param \Bitsnbolts\LaravelAnalytics\Data\Event $event
+     * @param \Bitsnbolts\LaravelAnalytics\Data\Campaign $campaign
      * @param string|null $clientId
      * @param array $params
      *

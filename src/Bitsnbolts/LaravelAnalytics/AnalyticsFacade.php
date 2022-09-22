@@ -1,14 +1,14 @@
 <?php
 
-namespace Ipunkt\LaravelAnalytics;
+namespace Bitsnbolts\LaravelAnalytics;
 
 use Illuminate\Support\Facades\Facade;
-use Ipunkt\LaravelAnalytics\Contracts\AnalyticsProviderInterface;
+use Bitsnbolts\LaravelAnalytics\Contracts\AnalyticsProviderInterface;
 
 /**
  * Class AnalyticsFacade
  *
- * @package Ipunkt\LaravelAnalytics
+ * @package Bitsnbolts\LaravelAnalytics
  */
 class AnalyticsFacade extends Facade
 {

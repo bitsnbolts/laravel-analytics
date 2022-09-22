@@ -1,11 +1,11 @@
 <?php
 
-namespace Ipunkt\LaravelAnalytics\Contracts;
+namespace Bitsnbolts\LaravelAnalytics\Contracts;
 
 /**
  * Interface TrackingBagInterface
  *
- * @package Ipunkt\LaravelAnalytics\Contracts
+ * @package Bitsnbolts\LaravelAnalytics\Contracts
  */
 interface TrackingBagInterface
 {
