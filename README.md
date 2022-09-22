@@ -1,11 +1,11 @@
 # Analytics tracking package for Laravel
 
-[![Latest Stable Version](https://poser.pugx.org/ipunkt/laravel-analytics/v/stable.svg)](https://packagist.org/packages/ipunkt/laravel-analytics) [![Latest Unstable Version](https://poser.pugx.org/ipunkt/laravel-analytics/v/unstable.svg)](https://packagist.org/packages/ipunkt/laravel-analytics) [![License](https://poser.pugx.org/ipunkt/laravel-analytics/license.svg)](https://packagist.org/packages/ipunkt/laravel-analytics) [![Total Downloads](https://poser.pugx.org/ipunkt/laravel-analytics/downloads.svg)](https://packagist.org/packages/ipunkt/laravel-analytics) [![Building](https://api.travis-ci.org/ipunkt/laravel-analytics.svg?branch=master)](https://travis-ci.org/ipunkt/laravel-analytics)
+[![Latest Stable Version](https://poser.pugx.org/bitsnbolts/laravel-analytics/v/stable.svg)](https://packagist.org/packages/bitsnbolts/laravel-analytics) [![Latest Unstable Version](https://poser.pugx.org/bitsnbolts/laravel-analytics/v/unstable.svg)](https://packagist.org/packages/bitsnbolts/laravel-analytics) [![License](https://poser.pugx.org/bitsnbolts/laravel-analytics/license.svg)](https://packagist.org/packages/bitsnbolts/laravel-analytics) [![Total Downloads](https://poser.pugx.org/bitsnbolts/laravel-analytics/downloads.svg)](https://packagist.org/packages/bitsnbolts/laravel-analytics) [![Building](https://api.travis-ci.org/bitsnbolts/laravel-analytics.svg?branch=master)](https://travis-ci.org/bitsnbolts/laravel-analytics)
 
 ## Quickstart
 
 ```
-composer require ipunkt/laravel-analytics
+composer require bitsnbolts/laravel-analytics
 ```
 
 You can use the facade `Analytics`.
@@ -32,34 +32,34 @@ Finally, just above your `</head>` closing tag place, this code:
 Add to your composer.json following lines
 
 	"require": {
-		"ipunkt/laravel-analytics": "~3.0"
+		"bitsnbolts/laravel-analytics": "~3.0"
 	}
 
-Add `Ipunkt\LaravelAnalytics\AnalyticsServiceProvider::class,` to `providers` in `app/config/app.php`.
+Add `Bitsnbolts\LaravelAnalytics\AnalyticsServiceProvider::class,` to `providers` in `app/config/app.php`.
 
-Optional: Add `'Analytics' => Ipunkt\LaravelAnalytics\AnalyticsFacade::class,` to `aliases` in `app/config/app.php`.
+Optional: Add `'Analytics' => Bitsnbolts\LaravelAnalytics\AnalyticsFacade::class,` to `aliases` in `app/config/app.php`.
 
-Run `php artisan vendor:publish --provider="Ipunkt\LaravelAnalytics\AnalyticsServiceProvider"`
+Run `php artisan vendor:publish --provider="Bitsnbolts\LaravelAnalytics\AnalyticsServiceProvider"`
 
-Then edit `analytics.php` in `config` to your needs. We do config merge in the service provider, so your local settings 
+Then edit `analytics.php` in `config` to your needs. We do config merge in the service provider, so your local settings
  will stay the same.
 
 For laravel 7.x please use the 3.x release.
 
 	"require": {
-		"ipunkt/laravel-analytics": "~3.0"
+		"bitsnbolts/laravel-analytics": "~3.0"
 	}
 
 For laravel 6.x please use the 2.x release.
 
 	"require": {
-		"ipunkt/laravel-analytics": "~2.0"
+		"bitsnbolts/laravel-analytics": "~2.0"
 	}
 
 For php < 7.2 or laravel < 6.0 please use the 1.x release.
 
 	"require": {
-		"ipunkt/laravel-analytics": "~1.0"
+		"bitsnbolts/laravel-analytics": "~1.0"
 	}
 
 ## Configuration
@@ -121,7 +121,7 @@ In controller action (or anywhere else) use following statement to track an even
 You can set an optional campaign for the tracking:
 
 	// creating a campaign
-	$campaign = new \Ipunkt\LaravelAnalytics\Data\Campaign('Sales2016');
+	$campaign = new \Bitsnbolts\LaravelAnalytics\Data\Campaign('Sales2016');
 	$campaign->setMedium('web')->setSource('IT Magazine')->setKeyword('Hot stuff');
 	Analytics::setCampaign($campaign);
 
@@ -144,7 +144,7 @@ You can inject the analytics provider by referencing the interface:
 
 	class PageController extends Controller
 	{
-		public function show(\Ipunkt\LaravelAnalytics\Contracts\AnalyticsProviderInterface $analytics)
+		public function show(\Bitsnbolts\LaravelAnalytics\Contracts\AnalyticsProviderInterface $analytics)
 		{
 			$analytics->setUserId(md5(\Auth::user()->id)); // identical to Analytics::setUserId(md5(\Auth::user()->id));
 			return view('welcome');
@@ -197,7 +197,7 @@ foreach ($policy->getHeaders(true) as $header) {
 The result looks like this:
 ```php
 array (size=1)
-  0 => 
+  0 =>
     array (size=2)
       'name' => string 'Content-Security-Policy' (length=23)
       'value' => string 'default-src 'none'; script-src 'nonce-RandomNonceStringFromAnalyticsProvider';' (length=58)
@@ -207,7 +207,7 @@ On rendering your analytics script the `nonce` attribute will be automatically a
 
 ## API Documentation
 
-For the correct usage methods look at the `Ipunkt\LaravelAnalytics\Contracts\AnalyticsProviderInterface.php`
+For the correct usage methods look at the `Bitsnbolts\LaravelAnalytics\Contracts\AnalyticsProviderInterface.php`
 
 ### Analytics::render()
 
@@ -340,8 +340,8 @@ Sometimes you have to track measurements, e.g. opening an email newsletter. Ther
 	 *
 	 * @param string $metricName
 	 * @param mixed $metricValue
-	 * @param \Ipunkt\LaravelAnalytics\Data\Event $event
-	 * @param \Ipunkt\LaravelAnalytics\Data\Campaign $campaign
+	 * @param \Bitsnbolts\LaravelAnalytics\Data\Event $event
+	 * @param \Bitsnbolts\LaravelAnalytics\Data\Campaign $campaign
 	 * @param string|null $clientId
 	 * @param array $params
 	 * @return string
@@ -376,7 +376,7 @@ Removing of an user id is also possible.
 	 *
 	 * @return AnalyticsProviderInterface
 	 */
-	public function unsetUserId(); 
+	public function unsetUserId();
 
 ### Analytics::setCampaign($campaign)
 
